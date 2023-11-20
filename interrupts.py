@@ -14,9 +14,9 @@ def low_to_high_callback(channel):
 def high_to_low_callback(channel):
       print("HIGH to LOW transition detected on GPIO",channel)
 
-GPIO.add_event_Detect(low_to_high_pin, GPIO.RISING,callback=low_to_high_callback, bouncetime=200)
+GPIO.add_event_detect(low_to_high_pin, GPIO.RISING,callback=low_to_high_callback, bouncetime=200)
 
-GPIO.add_event_Detect(high_to_low_pin, GPIO.FALLING,callback=high_to_low_callback, bouncetime=200)
+GPIO.add_event_detect(high_to_low_pin, GPIO.FALLING,callback=high_to_low_callback, bouncetime=200)
 
 try:
   print("Waiting for interrupts. Press Ctrl+C to exit.")
