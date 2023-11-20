@@ -4,8 +4,8 @@ pin=18
 gpio.setmode(gpio.BCM)
 gpio.setup(pin,gpio.OUT)
 gpio.output(pin,True)
-pwn=gpio.pwm(pin,500)
-pwm.start()
+pwn=gpio.PWM(pin,500)
+pwm.start(100)
 try:
     while True:
         gpio.output(pin,True)
