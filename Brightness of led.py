@@ -1,4 +1,5 @@
-import RPi.GPIO AS GPIOimport time
+import RPi.GPIO AS gpio
+import time
 pin=18
 gpio.setmode(gpio.BCM)
 gpio.setup(pin,gpio.OUT)
